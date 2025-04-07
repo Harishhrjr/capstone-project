@@ -1,0 +1,101 @@
+    <!DOCTYPE html>
+<html lang>
+<head>
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f3eb;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 40px 0;
+            font-size: 2rem;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            width: 30%;
+            min-width: 280px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .service-card h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .service-card .subheading {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        @media (max-width: 900px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="font-family: Garamond;">Our Services</h1>
+
+    <div class="services-container">
+        <div class="service-card">
+            <img src="C:\Users\hp\Desktop\record\UID\cafe\Screenshot 2025-03-14 210551.png" alt="Mobile Espresso Bar">
+            <h2>Mobile Espresso Bar</h2>
+            <p>Have Café Rouge Bistro pop up anywhere – your office, private party, wedding, wherever. We offer full espresso and pour over menus with a hospitality-first approach.</p>
+            <p class="subheading">Bar Cart</p>
+        </div>
+
+        <div class="service-card">
+            <img src="C:\Users\hp\Desktop\record\UID\cafe\Screenshot 2025-03-14 210802.png" alt="Office Coffee Program">
+            <h2>Office Coffee Program</h2>
+            <p>Help your employees and clients feel more appreciated and caffeinated by bringing The Coffee Movement to your space and elevate your existing brand experience.</p>
+            <p class="subheading">☕</p>
+        </div>
+
+        <div class="service-card">
+            <img src="C:\Users\hp\Desktop\record\UID\cafe\Screenshot 2025-03-14 210913.png" alt="Consulting">
+            <h2>Consulting</h2>
+            <p>Clients from Bubble Lab Robotics to DeLonghi have tapped into us to get their businesses and products ready for launch. We can help you too – whatever your needs may be.</p>
+            <p class="subheading">Café & Barista Training</p>
+        </div>
+    </div>
+
+</body>
+</html>

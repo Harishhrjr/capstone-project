@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.503);
+    width: 400px;
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group input:hover {
+    border: 2px solid rgba(0, 0, 0, 0.489);
+}
+
+.input-group label {
+    padding-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #697569;
+    color: aliceblue;
+}
+
+a {
+    color: #2eb433;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .input-group input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .input-group label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .input-group label {
+        font-size: 18px;
+    }
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f6f1eb;
+        }
+}
+    </style>
+</head>
+<body style="background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
+    <header>
+        <div class="logo">
+            <h1 style="text-align: center;font-family: Papyrus;margin-right: 150px;">Café Rouge Bistro</h1>
+        </div>
+    </header>
+    <center><div class="login-container">
+        <h2>Sign In</h2><br>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Confirm Password</label>  
+                <input type="password" id="passwords" name="password" placeholder="Confirm password" required>
+            </div><br>
+            <button type="button" onclick="red()" class="btn">Login</button>
+        </form>
+    </center>
+    </div>
+    <script>
+    function red(){
+    var pass=document.getElementById("passwords").value
+    var nam=document.getElementById("username").value
+    var pas=document.getElementById("password").value
+
+    if (nam=="admin" && pas=="6" && pas===pass){
+        window.location.replace('samp.html')
+    }
+    else{
+        window.alert("Credentials Incorrect !!")
+    }
+    }
+    </script>
+</body>
+</html>

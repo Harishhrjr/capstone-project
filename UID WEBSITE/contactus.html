@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f1e8;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            background-color: #000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's chat</h1>
+    <div class="container">
+        <div class="info">
+            <h2>Café Rouge Bistro</h2>
+            <strong>Chinatown / Nob Hill</strong><br>
+            1030 Washington Street<br>
+            San Francisco<br><br>
+            caferougebistro@gmail
+        </div>
+        <form id="contactForm">
+            <div class="form-group">
+                <label>Name (required)</label><br>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name">
+                <div id="nameError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label>Email (required)</label><br>
+                <input type="email" id="email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label>I'm interested in...</label>
+                <div class="checkbox-group" id="checkboxes">
+                    <label><input type="checkbox" name="interest"> Espresso Pop-Up</label>
+                    <label><input type="checkbox" name="interest"> Office Coffee Program</label>
+                    <label><input type="checkbox" name="interest"> Consulting</label>
+                    <label><input type="checkbox" name="interest"> Other</label>
+                </div>
+                <div id="checkboxError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label>Message (required)</label><br>
+                <textarea id="message" rows="4" required></textarea>
+                <div id="messageError" class="error"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("checkboxError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            let valid = true;
+
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const nameRegex = /^[A-Za-z]+$/;
+
+            if (!nameRegex.test(firstName)) {
+                document.getElementById("nameError").textContent = "First name should contain only letters.";
+                valid = false;
+            }
+            if (lastName && !nameRegex.test(lastName)) {
+                document.getElementById("nameError").textContent = "Last name should contain only letters.";
+                valid = false;
+            }
+
+            const email = document.getElementById("email").value.trim();
+            const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+            if (!emailRegex.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            const checkboxes = document.querySelectorAll("input[name='interest']");
+            let checked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            if (!checked) {
+                document.getElementById("checkboxError").textContent = "Please select at least one interest.";
+                valid = false;
+            }
+
+            const message = document.getElementById("message").value.trim();
+            if (message.length < 5) {
+                document.getElementById("messageError").textContent = "Message should be at least 5 characters.";
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Form submitted successfully!");
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+</body>
+</html>

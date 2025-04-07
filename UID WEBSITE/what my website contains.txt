@@ -1,0 +1,3 @@
+what my website contains?
+front page introduction of the hotel or whatever and the buttons for some navigation like menu, about us in detail, cart, login
+then everything above should open

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Café </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color:rgb(227, 192, 192);
+            color: rgb(85, 22, 22);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f6f1eb;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color:brown;
+            font-size: 16px;
+        }
+        .contact-btn {
+            background-color: rgb(225, 189, 139);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+        }
+        .hero {
+            background: url('download.webp') no-repeat center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 24px;
+            font-style: italic;
+        }
+        .info {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 style="text-align: center;font-family: Papyrus;">Café Rouge Bistro</h1>
+        </div>
+        <nav>
+            <a href="About us.html">About Us</a>
+            <a href="service.html">Our Services</a>
+            <a href="menu.html">Café Menu</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contactus.html" class="contact-btn">Contact Us</a>
+        </nav>
+    </header>
+    <div class="hero">
+
+    </div>
+    <div class="info">
+       
+        <p style="font-family:Lucida Handwriting">Not all wander are lost; some are simply looking for coffee</p>
+        <p style="font-family:Lucida Handwriting">Serving coffee everyday 7am - 4pm</p>
+        <p style="font-family:Lucida Handwriting">Can watch live football matches together!!!!!</p>
+    </div>
+
+</body>
+</html>
